@@ -22,6 +22,22 @@ module.exports = () => {
       template: './index.html',
       title: 'JATE'
     }),
+    new WebpackPwaManifest({
+      name: 'Jate-code-editor-Application',
+      short_name: 'JATE',
+      description: 'Functioning code editor!',
+      background_color: '#272822;',
+      theme_color: '#272822;',
+      start_url: './',
+      publicPath: './',
+      icons: [
+        {
+          src: path.resolve('src/images/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: path.join('assets', 'icons'),
+        }
+      ],
+    }),
     new InjectManifest({
       swSrc: './src-sw.js',
       swDest: 'service-worker.js',
@@ -38,6 +54,16 @@ module.exports = () => {
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
         },
       ],
     },
