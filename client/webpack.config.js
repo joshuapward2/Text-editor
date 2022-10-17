@@ -20,8 +20,12 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
       template: './index.html',
-      title: 'Code Editor'
+      title: 'JATE'
     }),
+    new InjectManifest({
+      swSrc: './src-sw.js',
+      swDest: 'service-worker.js',
+    }), 
       
     ],
 
