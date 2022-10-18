@@ -26,8 +26,8 @@ module.exports = () => {
       name: 'Jate-code-editor-Application',
       short_name: 'JATE',
       description: 'Functioning code editor!',
-      background_color: '#272822;',
-      theme_color: '#272822;',
+      background_color: '#272822',
+      theme_color: '#272822',
       start_url: './',
       publicPath: './',
       icons: [
