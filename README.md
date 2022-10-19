@@ -21,4 +21,8 @@ Link to gitHub:
 https://github.com/joshuapward2/Text-editor/tree/main
 
 Link to deployed app:
+https://agile-citadel-63258.herokuapp.com/
+
+https://salty-tundra-26398.herokuapp.com/
+
 
